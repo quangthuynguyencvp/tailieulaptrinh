@@ -2,18 +2,40 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Trang Lý Thuyết Của Tôi</title>
+  <title>Tài Liệu Hướng Dẫn Lập Trình C++</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Trang tra cứu C++ - Thầy Quang">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <!-- Giao diện Vue mặc định của Docsify -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <!-- 1. THÊM CSS ĐỂ LÀM HIỆU ỨNG ẨN/HIỆN SIDEBAR -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.css" />
 </head>
 <body>
-  <div id="app">Đang tải...</div>
+  <div id="app">Đang tải tài liệu...</div>
   <script>
     window.$docsify = {
-      name: 'Sổ Tay Lý Thuyết',
+      name: 'Học C++ Cùng Thầy Quang',
       repo: '',
-      loadSidebar: true // Bật thanh menu bên trái
+      loadSidebar: true, // Bật sidebar từ file _sidebar.md
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      subMaxLevel: 3,
+      
+      <!-- 2. CẤU HÌNH ĐỘ SÂU HIỂN THỊ BAN ĐẦU -->
+      // Số 1 có nghĩa là ban đầu chỉ hiện các mục cha (Chương 1, Chương 2). 
+      // Khi bấm vào mới xổ ra các bài con bên trong.
+      sidebarDisplayLevel: 1 
     }
   </script>
+  
+  <!-- Core của Docsify -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- 3. THÊM JS CỦA PLUGIN CO RÚT SIDEBAR -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
